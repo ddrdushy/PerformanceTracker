@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .row
+      .col-lg-offset-3.col-lg-6
+        .form-group
+          label(for='year') Select Year:
+          select#year.form-control
+      .col-lg-offset-3.col-lg-6
+        .form-group
+          label(for='month') Select Month:
+          select#month.form-control
+      .form-group
+        button#load.btn.btn-primary.col-lg-offset-4.col-lg-4 Load Activity
+    hr
+    .row
+      .col-lg-12(id="data")
