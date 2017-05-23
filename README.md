@@ -1,0 +1,2 @@
+# Performance Tracker Project
+This project is helps to add data about the performance on the year and monthly basis. user can add the data as a **markdown** format. that will render and displayed. File name should be in the format of `year_month.md`.This files have to be maintained inside the data folder. follow this link to view the [demo](https://performancet.herokuapp.com)
