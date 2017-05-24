@@ -22,13 +22,14 @@ $(document).ready(()=>{
 
     $('#load').on('click',()=>{
         var file= $('#year').val()+"_"+$('#month').val()+".md";
+        $('#loading-image').show();
         $.ajax({
             type: 'GET',
             url: './api/files/'+file
         })
             .done((data)=>{
                 $('#data').html(marked(data.data));
-                console.log(data);
+                $('#loading-image').hide();
             });
     });
 });
