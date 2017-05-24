@@ -15,9 +15,11 @@ $(document).ready(()=>{
 
 
     $('#year').on('change',()=>{
-        console.log(serverData);
-        console.log(serverData[$('#year').val()]);
         loadMonths(serverData[$('#year').val()]);
+    });
+
+    $('#month').on('change',()=>{
+        $('#month').val() === 'Select' ? $('#load').prop('disabled',true):$('#load').prop('disabled',false);
     });
 
     $('#load').on('click',()=>{
